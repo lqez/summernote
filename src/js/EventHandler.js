@@ -242,9 +242,9 @@ define([
 
           dialog.showImageDialog($editable, $dialog).then(function (data) {
             if (typeof data === 'string') {
+              editor.restoreRange($editable);
               editor.insertImage($editable, data);
             } else {
-              editor.restoreRange($editable);
               insertImages($editable, data);
             }
           });
