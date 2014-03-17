@@ -37,10 +37,10 @@ define('module/Dialog', function () {
 
           // Cloning imageInput to clear element.
           $imageInput.replaceWith($imageInput.clone()
-              .on('change', function () {
-                $imageDialog.modal('hide');
-                deferred.resolve(this.files);
-              })
+            .on('change', function () {
+              $imageDialog.modal('hide');
+              deferred.resolve(this.files);
+            })
           );
 
           $imageBtn.click(function (event) {
